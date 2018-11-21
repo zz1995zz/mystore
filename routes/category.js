@@ -19,8 +19,8 @@ router.get("/queryTopCategory", function (req, res) {
         if (err) return res.send({ "error": 403, "message": "数据库异常！" });
 
         var obj={
-             total:data.length,
-             rows:data
+            total:data.length,
+            rows:data
         }
         res.send(obj);
     })

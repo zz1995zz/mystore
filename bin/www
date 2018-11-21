@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('letao:server');
+var debug = require('debug')('leato:server');
 var http = require('http');
 
 /**
