@@ -70,7 +70,8 @@
     margin: 0 15px;
 }
 
-.ct_order a span {
+.ct_order a.now {
+    color: darkorange;
 }
 
 /*商品*/
