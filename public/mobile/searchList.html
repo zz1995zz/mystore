@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/mui/css/mui.css"/>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/search.css"/>
+    <link rel="stylesheet" href="css/searchList.css"/>
 </head>
 <body>
 <!--首页-->
@@ -41,6 +41,15 @@
             <a href="#">销量<span class="fa fa-angle-down"></span></a>
             <a href="#">折扣<span class="fa fa-angle-down"></span></a>
         </div>
+        <div class="ct_wrapper">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="ct_product">
+                    <!--页面渲染-->
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </div>
 <footer class="ct_footer">
@@ -52,9 +61,28 @@
     </ul>
 </footer>
 </div>
+<!--模板引擎-->
+<script type="text/template" id="list">
+    <%if(data.length){%>
+    <%for (var i=0;i< data.length ; i++ ){%>
+    <div class="pro_item">
+        <a href="product.html?<%=data[i].id%>" class="pro_item_box">
+            <img src="<%=data[i].pic[0].picAddr%>" alt="">
+            <sapn class="mui-ellipsis-2"><%=data[i].proName%></sapn>
+            <p>
+                <span>&yen;<%=data[i].price%></span><span>&yen;<%=data[i].oldPrice%></span>
+            </p>
+            <button>立即购买</button>
+        </a>
+    </div>
+    <%}%>
+    <%}else{%>
+    <p>没有搜到相应商品</p>
+    <%}%>
+</script>
 <script src="assets/mui/js/mui.js"></script>
 <script src="assets/zepto/zepto.min.js"></script>
-<script src="assets/artTemplate/template.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
 <script src="js/common.js"></script>
 <script src="js/searchList.js"></script>
 </body>
