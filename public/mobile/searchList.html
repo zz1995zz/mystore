@@ -71,7 +71,7 @@
     <%if(data.length){%>
     <%for (var i=0;i< data.length ; i++ ){%>
     <div class="pro_item">
-        <a href="product.html?<%=data[i].id%>" class="pro_item_box">
+        <a href="product.html?<%='productId='+data[i].id%>" class="pro_item_box">
             <img src="<%=data[i].pic[0].picAddr%>" alt="">
             <sapn class="mui-ellipsis-2"><%=data[i].proName%></sapn>
             <p>
