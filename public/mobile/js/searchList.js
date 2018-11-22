@@ -13,13 +13,14 @@ $(function () {
     var $input = $('input').val(urlParams.key || '');
 
 //    初始加载第一页4条数据
-    getSearchData({
-        proName: urlParams.key,
-        page: 1,
-        pageSize: 4
-    }, function (data) {
-        $('.ct_product').html(template('list', data));
-    });
+//    下拉自动刷新 重复代码
+//     getSearchData({
+//         proName: urlParams.key,
+//         page: 1,
+//         pageSize: 4
+//     }, function (data) {
+//         $('.ct_product').html(template('list', data));
+//     });
 
 
 //    用户重新搜索
@@ -81,6 +82,80 @@ $(function () {
 
 //    下拉刷新页面
 //    上拉加载下一页
+    mui.init({
+        pullRefresh : {
+            container:"#refreshContainer",//下拉刷新容器标识
+            //下拉
+            down : {
+                auto: true,//可选,默认false.首次加载自动上拉刷新一次
+                callback :function(){
+                    //    页面渲染
+                    var that=this;
+                    var key = $input.val().trim();
+                    //   判断key是否存在
+                    if (!key) {
+                        mui.toast('请输入商品名！', {duration: 'short', type: 'div'});
+                        return;
+                    };
+                    //    重置排序
+                    $('.ct_order a').addClass('now').siblings().removeClass('now');
+                    $('.ct_order a').siblings().find('span').removeClass('fa-angle-up').addClass('fa-angle-down');
+                    getSearchData({
+                        proName: key,
+                        page: 1,
+                        pageSize: 4
+                    }, function (data) {
+                       setTimeout(function(){
+                           $('.ct_product').html(template('list', data));
+                           //停止下拉刷新
+                           that.endPulldownToRefresh();
+                       //    重置上拉加载
+                           that.refresh(true);
+                       },1000);
+                    });
+                }
+            },
+        //    上拉
+            up : {
+                callback :function(){
+                    window.page++;
+                    var that=this;
+                    var key = $input.val().trim();
+                    var order=$('.ct_order a.now').attr('data-order');
+                    var orderVal=$('.ct_order a.now').find('span').hasClass('fa-angle-down')?2:1;
+                    //   判断key是否存在
+                    if (!key) {
+                        mui.toast('请输入商品名！', {duration: 'short', type: 'div'});
+                        return;
+                    }
+                    var params={
+                        proName: key,
+                        page: window.page,
+                        pageSize: 4
+                    };
+                    if(order){
+                        params[order]=orderVal;
+                    }
+                    getSearchData(params, function (data) {
+                        setTimeout(function(){
+                            $('.ct_product').append(template('list', data));
+                            //结束上拉刷新
+                            if(data.data.length){
+                                that.endPullupToRefresh();
+                            }else{
+                                that.endPullupToRefresh(true);
+                            }
+                        },1000);
+                    });
+
+                }
+            }
+
+        }
+    });
+
+
+
 
 });
 
@@ -93,6 +168,8 @@ var getSearchData = function (params, callback) {
         data: params,
         dataType: 'json',
         success: function (data) {
+            //当前页码
+            window.page=data.page;
             callback && callback(data);
         }
     })
