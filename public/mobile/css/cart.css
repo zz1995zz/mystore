@@ -80,9 +80,13 @@
 .cart_update{
     text-align: left;
 }
+.mui-popup-text{
+   overflow: hidden;
+}
 .p_number{
     padding: 5px;
     font-size: 14px;
+    float: left;
 }
 .p_number .jian,.p_number .jia{
     width: 28px;
@@ -111,6 +115,7 @@
 .p_size{
     padding: 5px;
     font-size: 14px;
+    float: left;
 }
 .p_size .btn_size{
     width: 28px;

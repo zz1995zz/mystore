@@ -1,52 +1,132 @@
-$(function(){
+$(function () {
 //  区域滚动
     mui('.mui-scroll-wrapper').scroll({
         indicators: false //是否显示滚动条
     });
 
     mui.init({
-        pullRefresh : {
-            container:"#refreshContainer",
+        pullRefresh: {
+            container: "#refreshContainer",
             //下拉
-            down : {
+            down: {
                 auto: true,
-                callback :function(){
-                    var that=this;
-                    //把下拉对象保存到全局，以便重新刷新使用
-                    window.down=that;
-                  setTimeout(function(){
-                     getCartData(function(data){
-                         //停止下拉刷新
-                         that.endPulldownToRefresh();
-                         //    渲染页面
-                         $('.mui-table-view').html(template('cart',data));
-                     });
-                  },1000);
+                callback: function () {
+                    var that = this;
+                    setTimeout(function () {
+                        getCartData(function (data) {
+                            //停止下拉刷新
+                            that.endPulldownToRefresh();
+                            //    渲染页面
+                            $('.mui-table-view').html(template('cart', data));
+                        });
+                    }, 1000);
                 }
             }
         }
     });
 
 //    重新刷新
-    $('.fa-refresh').on('tap',function(){
-     //   刷新
-     window.down.pulldownLoading();
+    $('.fa-refresh').on('tap', function () {
+        //   刷新
+        mui('#refreshContainer').pullRefresh().pulldownLoading();
+    });
+
+//    点击编辑 弹出编辑框
+    $('.mui-table-view').on('tap', '.mui-icon-compose', function () {
+        //    弹框
+        var id = $(this).parent().attr('data-id');
+        var item = getArrData(window.cartData.data, id);
+        var html = template('edit', item).replace(/\n/g, '');
+        mui.confirm(html, '商品编辑', ['确认', '取消'], function (e) {
+            if (e.index == 0) {
+                //    发送修改请求
+                var size = $('.btn_size.now').text();
+                var num = $('.p_number input').val();
+                CT.loginAjax({
+                    url: '/cart/updateCart',
+                    type: 'post',
+                    data: {
+                        id: id,
+                        size: size,
+                        num: num
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.success) {
+                            //   修改数据重新渲染
+                            item.num = num;
+                            item.size = size;
+                            $('.mui-table-view').html(template('cart', window.cartData));
+                        }
+                    }
+                });
+            }
+        });
+    });
+//    点击删除 删除数据
+    $('.mui-table-view').on('tap','.mui-icon-trash',function(){
+        var $that=$(this);
+        var id = $that.parent().attr('data-id');
+        mui.confirm('确定删除该商品吗？', '商品删除', ['确认', '取消'], function (e) {
+            if (e.index == 0) {
+                //    发送删除请求
+                CT.loginAjax({
+                    url: '/cart/deleteCart',
+                    type: 'get',
+                    data: {
+                        id: id,
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.success) {
+                            //   删除元素
+                             $that.parent().parent().remove();
+                        }
+                    }
+                });
+            }
+        });
+    });
+//    编辑框尺码和数量注册事件
+    $('body').on('tap', '.p_size span', function () {
+        $(this).addClass('now').siblings().removeClass('now');
+    });
+    $('body').on('tap', '.p_number span', function () {
+        var currentNum = $('.p_number input').val();
+        //字符串转数字
+        var maxNum = parseInt($('.p_number input').attr('data-max'));
+        //    判断加减
+        if ($(this).hasClass('jian')) {
+            if (currentNum > 1) {
+                currentNum--;
+            } else {
+                mui.toast('至少选择一件！');
+            }
+        } else {
+            if (currentNum < maxNum) {
+                currentNum++;
+            } else {
+                mui.toast('已达库存上限！');
+            }
+        }
+        $('.p_number input').val(currentNum);
     });
 
 });
 
 //获取购物车数据
-var getCartData=function(callback){
+var getCartData = function (callback) {
     $.ajax({
-        url:'/cart/queryCartPaging',
-        type:'get',
-        data:{
-           page:1,
-            pageSize:100
+        url: '/cart/queryCartPaging',
+        type: 'get',
+        data: {
+            page: 1,
+            pageSize: 100
         },
-        dataType:'json',
-        success:function(data){
-            callback&&callback(data);
+        dataType: 'json',
+        success: function (data) {
+            window.cartData = data;
+            callback && callback(data);
         }
     });
 };

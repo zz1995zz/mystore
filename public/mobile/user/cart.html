@@ -51,7 +51,7 @@
 <script type="text/template" id="cart">
     <%for(var i=0;i< data.length;i++){%>
     <li data-product class="mui-table-view-cell mui-media">
-        <div class="mui-slider-right mui-disabled">
+        <div class="mui-slider-right mui-disabled" data-id="<%=data[i].id%>">
             <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose"></a>
             <a class="mui-btn mui-btn-red mui-icon mui-icon-trash"></a>
         </div>
@@ -77,6 +77,20 @@
         </div>
     </li>
     <%}%>
+</script>
+<!--编辑框模板引擎-->
+<script type="text/template" id="edit">
+    <div class="p_size">
+        尺码：
+        <% var arr=productSize.split('-')%>
+        <% for(var i=arr[0];i<=arr[arr.length-1];i++){ %>
+        <span class="btn_size <%=i==size?'now':''%>"><%=i%></span>
+        <%}%>
+    </div>
+    <div class="p_number">
+        数量：
+        <span class="jian">-</span><input type="text" value="<%=num%>" data-max="<%=productNum%>" readonly><span class="jia">+</span>
+    </div>
 </script>
 <script src="../assets/mui/js/mui.js"></script>
 <script src="../assets/zepto/zepto.min.js"></script>
