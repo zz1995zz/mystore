@@ -59,17 +59,15 @@ $(function(){
                 },
                 dataType: 'json',
                 success:function(data){
-                if(data.success=true){
-                //    弹框
-                    var btnArray = ['是', '否'];
-                    mui.confirm('添加成功，要到购物车看看？', '温馨提示', btnArray, function(e) {
-                        if (e.index == 0) {
-                            location.href='/mobile/user/cart.html';
-                        } else {
-
-                        }
-                    });
-                }
+                    if(data.success=true){
+                        //    弹框
+                        var btnArray = ['是', '否'];
+                        mui.confirm('添加成功，要到购物车看看？', '温馨提示', btnArray, function(e) {
+                            if (e.index == 0) {
+                                location.href='/mobile/user/cart.html';
+                            }
+                        });
+                    }
                 }
             });
         });

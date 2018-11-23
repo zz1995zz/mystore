@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <!--ios设置-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <!--网页描述和关键字-->
+    <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <title>乐淘-购物车</title>
+    <link type="image/x-icon" rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cart.css"/>
 </head>
 <body>
-
+<!--首页-->
+<div class="ct_container">
+    <header class="ct_header">
+        <a href="javascript:history.back();" class="left"><span class="mui-icon mui-icon-arrowleft"></span></a>
+        <h3>购物车</h3>
+        <a href="javascript:;" class="right"><span class="fa fa-refresh"></span></a>
+    </header>
+    <div class="ct_content">
+        <div class="ct_wrapper">
+            <div class="mui-scroll-wrapper" id="refreshContainer">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view">
+                        <!--页面渲染-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart_order">订单总额：&yen;<span id="cartAmount">0.00</span> <a href="javascript:;">生成订单</a></div>
+    <footer class="ct_footer">
+        <ul>
+            <li><a href="../index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+            <li><a href="../category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+            <li class="now"><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+            <li><a href="index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+        </ul>
+    </footer>
+</div>
+<!--模板引擎-->
+<script type="text/template" id="cart">
+    <%for(var i=0;i< data.length;i++){%>
+    <li data-product class="mui-table-view-cell mui-media">
+        <div class="mui-slider-right mui-disabled">
+            <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose"></a>
+            <a class="mui-btn mui-btn-red mui-icon mui-icon-trash"></a>
+        </div>
+        <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+            <div class="mui-table-cell">
+                <a href="javascript:;">
+                    <%
+                    var picAddr=data[i].pic[0].picAddr;
+                    %>
+                    <img class="mui-media-object mui-pull-left" src="<%=picAddr%>">
+                    <div class="mui-media-body">
+                        <p class="mui-ellipsis-2"><%=data[i].proName%></p>
+                        <p class="info">
+                            <span class="price">&yen;<%=data[i].price%></span>
+                            <span class="oldPrice">&yen;<%=data[i].oldPrice%></span>
+                            <span class="number">×<%=data[i].num%>双</span>
+                        </p>
+                        <p><span class="size">鞋码：<%=data[i].size%></span></p>
+                    </div>
+                    <input data-id="<%=data[i].id%>" type="checkbox"/>
+                </a>
+            </div>
+        </div>
+    </li>
+    <%}%>
+</script>
+<script src="../assets/mui/js/mui.js"></script>
+<script src="../assets/zepto/zepto.min.js"></script>
+<script src="../assets/artTemplate/template-native.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/cart.js"></script>
 </body>
 </html>

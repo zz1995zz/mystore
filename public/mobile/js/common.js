@@ -36,7 +36,7 @@ CT.loginAjax=function(params){
                location.href=CT.loginUrl+'?returnUrl='+location.href;
                return false;
             }else{
-              params.success||params.success(data);
+              params.success&&params.success(data);
             }
         },
         error:function(){

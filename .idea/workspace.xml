@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5058a209-205c-4efc-92f9-702f3ae16411" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/mobile/css/user.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mobile/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mobile/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mobile/css/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mobile/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/user/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mobile/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mobile/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/js/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/searchList.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/searchList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/user/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mobile/user/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mobile/user/cart.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,26 +21,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/mobile/user/login.html">
+        <entry file="file://$PROJECT_DIR$/public/mobile/user/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="302">
+              <caret line="26" column="71" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/mobile/js/login.js">
+        <entry file="file://$PROJECT_DIR$/public/mobile/js/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="209">
+              <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/mobile/css/user.css">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -55,9 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -67,6 +55,8 @@
       <find>index</find>
       <find>index.html</find>
       <find>btn_size</find>
+      <find>data-</find>
+      <find>生成</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,15 +82,18 @@
         <option value="$PROJECT_DIR$/public/mobile/css/user.css" />
         <option value="$PROJECT_DIR$/public/mobile/user/index.html" />
         <option value="$PROJECT_DIR$/public/mobile/user/login.html" />
+        <option value="$PROJECT_DIR$/public/mobile/js/login.js" />
         <option value="$PROJECT_DIR$/public/mobile/js/product.js" />
         <option value="$PROJECT_DIR$/public/mobile/js/common.js" />
-        <option value="$PROJECT_DIR$/public/mobile/js/login.js" />
+        <option value="$PROJECT_DIR$/public/mobile/css/cart.css" />
+        <option value="$PROJECT_DIR$/public/mobile/user/cart.html" />
+        <option value="$PROJECT_DIR$/public/mobile/js/cart.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="71" />
-    <option name="y" value="155" />
+    <option name="x" value="55" />
+    <option name="y" value="50" />
     <option name="width" value="1253" />
     <option name="height" value="671" />
   </component>
@@ -126,6 +119,13 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="letao" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="letao" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -192,15 +192,15 @@
       <workItem from="1542782942023" duration="15375000" />
       <workItem from="1542814237933" duration="98000" />
       <workItem from="1542846001476" duration="24786000" />
-      <workItem from="1542947945597" duration="5816000" />
+      <workItem from="1542947945597" duration="16433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49549000" />
+    <option name="totallyTimeSpent" value="60166000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="155" width="1253" height="671" extended-state="0" />
+    <frame x="55" y="50" width="1253" height="671" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24938272" />
@@ -227,55 +227,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day02/04-代码/m/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="57" column="83" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day02/04-代码/m/js/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-482">
-          <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/m/js/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/m/js/common.js" />
-    <entry file="file://$PROJECT_DIR$/public/m/index.html" />
-    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/m/searchList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
-          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/m/css/common.css" />
     <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/m/css/searchList.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -298,22 +249,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/mobile/searchList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/mobile/css/searchList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-672">
           <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/css/category.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/mobile/js/category.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -338,24 +279,10 @@
         <state relative-caret-position="-553" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="76" column="21" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -400,44 +327,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/searchList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/js/searchList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="127" column="79" lean-forward="true" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/user/cart.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/mobile/demo.html" />
-    <entry file="file://$PROJECT_DIR$/public/mobile/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="91" column="24" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/mobile/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-724" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/css/user.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="133" column="12" lean-forward="true" selection-end-line="145" selection-end-column="7" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/mobile/category.html">
@@ -447,17 +340,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/user/index.html">
+    <entry file="file://$PROJECT_DIR$/public/mobile/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="164">
+          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/js/product.js">
+    <entry file="file://$PROJECT_DIR$/public/mobile/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="266">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -468,17 +361,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/js/common.js">
+    <entry file="file://$PROJECT_DIR$/public/mobile/css/user.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/mobile/searchList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="53" />
+        <state relative-caret-position="-387">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mobile/js/login.js">
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/m/searchList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="-558">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/m/user/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1425" />
+      </provider>
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/m/css/user.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/mobile/css/cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2040">
+          <caret selection-end-line="127" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/searchList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/user/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="131" column="10" lean-forward="true" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/css/category.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/css/cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2216">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/mobile/cate.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day03/04-代码/m/user/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/黑马web视频/13.电商项目视频(共59多集)/电商项目资料/day01/05代码练习/letao/public/mobile/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/js/searchList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="145" column="62" lean-forward="true" selection-start-line="145" selection-start-column="62" selection-end-line="145" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="91" column="24" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/js/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/user/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="26" column="71" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
         </state>
       </provider>
     </entry>
