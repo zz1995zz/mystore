@@ -33,6 +33,12 @@ $(function () {
 
 //    点击编辑 弹出编辑框
     $('.mui-table-view').on('tap', '.mui-icon-compose', function () {
+        //所有复选框已选择的商品的id
+        var checkedId = [];
+        $('[type=checkbox]:checked').each(function (i, item) {
+            checkedId[i] = $(item).attr('data-id');
+        });
+
         //    弹框
         var id = $(this).parent().attr('data-id');
         var item = getArrData(window.cartData.data, id);
@@ -57,6 +63,12 @@ $(function () {
                             item.num = num;
                             item.size = size;
                             $('.mui-table-view').html(template('cart', window.cartData));
+                            //恢复复选框选择状态
+                            checkedId.forEach(function (item, i) {
+                                var query = 'input[data-id="' + `${item}"]`;
+                                $(query).prop('checked', true);
+                            });
+                            getAmount();
                         }
                     }
                 });
@@ -64,8 +76,8 @@ $(function () {
         });
     });
 //    点击删除 删除数据
-    $('.mui-table-view').on('tap','.mui-icon-trash',function(){
-        var $that=$(this);
+    $('.mui-table-view').on('tap', '.mui-icon-trash', function () {
+        var $that = $(this);
         var id = $that.parent().attr('data-id');
         mui.confirm('确定删除该商品吗？', '商品删除', ['确认', '取消'], function (e) {
             if (e.index == 0) {
@@ -80,7 +92,9 @@ $(function () {
                     success: function (data) {
                         if (data.success) {
                             //   删除元素
-                             $that.parent().parent().remove();
+                            $that.parent().parent().remove();
+                            //    重新计算金额
+                            getAmount();
                         }
                     }
                 });
@@ -112,6 +126,11 @@ $(function () {
         $('.p_number input').val(currentNum);
     });
 
+//    金额计算  复选框注册事件
+    $('.mui-table-view').on('change', '[type=checkbox]', function () {
+        getAmount();
+    });
+
 });
 
 //获取购物车数据
@@ -129,4 +148,29 @@ var getCartData = function (callback) {
             callback && callback(data);
         }
     });
+};
+
+//获取总金额
+var getAmount = function () {
+    //获取复选框对象
+    var $checkBox = $('[type=checkbox]:checked');
+    var amountSum = 0;
+    $checkBox.each(function (i, item) {
+        //    金额=数量*单价
+        var id = $(this).attr('data-id');
+        var item = getArrData(window.cartData.data, id);
+        var num = item.num;
+        var price = item.price;
+        var amount = num * price;
+        amountSum = parseFloat(amountSum) + amount;
+        //保留两位小数  只舍不入
+        if (Math.floor(amountSum * 100) % 10) {
+            amountSum = Math.floor(amountSum * 100) / 100;
+        } else {
+            amountSum = Math.floor(amountSum * 100) / 100;
+            amountSum = amountSum.toString() + '0';
+        }
+    });
+//    显示金额
+    $('#cartAmount').html(amountSum);
 };
