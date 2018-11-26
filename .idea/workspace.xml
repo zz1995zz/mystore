@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5058a209-205c-4efc-92f9-702f3ae16411" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/login.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,7 +15,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/admin/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/admin/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,13 +125,13 @@
         <option value="$PROJECT_DIR$/../hexo/_config.yml" />
         <option value="$PROJECT_DIR$/../hexo/themes/next/source/css/_common/components/header/menu.styl" />
         <option value="$PROJECT_DIR$/../hexo/themes/next/_config.yml" />
-        <option value="$PROJECT_DIR$/public/admin/login.html" />
         <option value="$PROJECT_DIR$/public/admin/js/login.js" />
         <option value="$PROJECT_DIR$/public/admin/js/index.js" />
-        <option value="$PROJECT_DIR$/public/admin/js/admin.js" />
         <option value="$PROJECT_DIR$/public/admin/js/categoryFirst.js" />
         <option value="$PROJECT_DIR$/public/admin/js/productMange.js" />
         <option value="$PROJECT_DIR$/public/admin/js/userManage.js" />
+        <option value="$PROJECT_DIR$/public/admin/login.html" />
+        <option value="$PROJECT_DIR$/public/admin/js/admin.js" />
       </list>
     </option>
   </component>
@@ -143,6 +163,13 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="letao" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -207,15 +234,16 @@
       <workItem from="1542846001476" duration="24786000" />
       <workItem from="1542947945597" duration="25577000" />
       <workItem from="1543041495642" duration="14065000" />
-      <workItem from="1543114525111" duration="30479000" />
+      <workItem from="1543114525111" duration="31670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113854000" />
+    <option name="totallyTimeSpent" value="115045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="72" width="1103" height="634" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1971831" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -548,9 +576,6 @@
     <entry file="file://$PROJECT_DIR$/public/admin/js/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -569,8 +594,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+        <state relative-caret-position="152">
+          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
