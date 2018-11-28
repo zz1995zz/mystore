@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.min.css"/>
     <link rel="stylesheet" href="assets/nprogress/nprogress.css"/>
     <link rel="stylesheet" href="css/admin.css"/>
+    <style>
+        #fileUpload{
+            width: 82px;
+            height: 34px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
 <!--侧边栏-->
@@ -48,7 +58,7 @@
             <li class="active">二级分类</li>
         </ol>
         <div class="ad_content">
-            <button id="addBtn" class="btn btn-default mb_15">添加分类</button>
+            <button id="addBtn" class="btn btn-default mb_15" data-toggle="modal" data-target="#addCategory">添加分类</button>
             <table class="table table-bordered table-hover ">
                 <thead>
                 <tr>
@@ -71,6 +81,48 @@
         </div>
     </div>
 </section>
+<!--模态框-->
+<div class="modal fade" id="addCategory">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="addCategoryForm">
+                    <div class="form-group">
+                        <span>一级分类：</span>
+                        <div class="dropdown btn-group mb_15">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                请选择
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!--页面渲染-->
+                            </ul>
+                        </div>
+                        <input type="hidden" name="categoryId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control"  placeholder="请输入二级分类名称" name="brandName">
+                    </div>
+                    <div class="form-group" style="position: relative">
+                        <btton class="btn btn-default">上传图片</btton>
+                        <input id="fileUpload" type="file" name="pic1" >
+                        <input type="hidden" name="brandLogo">
+                    </div>
+                    <img id="categoryPic" src="images/none.png" alt="" width="100" height="100">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" form="addCategoryForm">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--分页模板引擎-->
 <script type="text/template" id="categorySecond">
     <%for(var i=0;i< rows.length;i++){%>
     <tr>
@@ -81,11 +133,22 @@
     </tr>
     <%}%>
 </script>
+<!--模态框一级分类模板引擎-->
+<script type="text/template" id="dropdownData">
+    <%for(var i=0;i< rows.length;i++){%>
+    <li><a href="javascript:;" data-id="<%=rows[i].id%>"><%=rows[i].categoryName%></a></li>
+    <%}%>
+</script>
 <script src="assets/jquery/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="assets/nprogress/nprogress.js"></script>
 <script src="assets/artTemplate/template-native.js"></script>
+<script src="assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<!--上传插件-->
+<script src="assets/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="assets/jquery-fileupload/jquery.iframe-transport.js"></script>
+<script src="assets/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/categorySecond.js"></script>
 </body>

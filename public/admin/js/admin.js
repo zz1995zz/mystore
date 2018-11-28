@@ -26,7 +26,7 @@ $(function () {
 
 
 //    模态框
-    var logoutModal=['<div class="modal fade">',
+    var logoutModal=['<div class="modal fade" id="logout">',
         '    <div class="modal-dialog modal-sm">',
         '        <div class="modal-content">',
         '            <div class="modal-header">',
@@ -48,10 +48,10 @@ $(function () {
 //    退出登录
     $('[data-logout]').on('click', function () {
         //弹出模态框
-        $('.modal').modal('show');
+        $('#logout').modal('show');
     });
 
-    $('.modal').find('.btn-primary').on('click', function () {
+    $('#logout').find('.btn-primary').on('click', function () {
         //    确定退出
         $.ajax({
             url: '/employee/employeeLogout',

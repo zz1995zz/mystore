@@ -110,7 +110,7 @@ router.post("/addSecondCategory", function (req, res) {
         brandName: req.body.brandName ? req.body.brandName : '',
         categoryId: req.body.categoryId ? parseInt(req.body.categoryId) : '',
         isDelete: req.body.isDelete ? parseInt(req.body.isDelete) : '',
-        hot: req.body.hot ? parseInt(req.body.hot) : '',
+        // hot: req.body.hot ? parseInt(req.body.hot) : '',
         brandLogo: req.body.brandLogo ? req.body.brandLogo : ''
     })
     Brand.addSecondCategory(brand, function (err, data) {
